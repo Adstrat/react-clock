@@ -1,5 +1,11 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
 .clock {
-  text-align: center;
-  padding-top: 50px;
   color: blue;
+  font-size: 400%;
 }
