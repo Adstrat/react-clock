@@ -1,11 +1,21 @@
-.container {
+.main-container {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 80vh;
 }
 
+.time-container {
+  width: 342px;
+}
+
 .clock {
-  color: blue;
   font-size: 400%;
+  padding: 40px;
+  border-radius: 120px;
+}
+
+.clock:hover {
+  box-shadow: 10px 10px #D9EDFF;
+  cursor: pointer;
 }
