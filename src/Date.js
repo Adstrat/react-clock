@@ -9,23 +9,13 @@ export default class Clock extends React.Component {
     };
   }
 
-  componentDidMount() {
-    this.timerID = setInterval( () => {
-      this.setState( { date: new Date() } );
-    }, 1000 );
-  }
-
-  componentWillUnmount() {
-    clearInterval( this.timerID );
-  }
-
   render() {
     return (
       <div
-        className="clock"
+        className="date"
         style={this.props.style}
       >
-        {this.state.date.toLocaleTimeString()}
+        {this.state.date.toDateString()}
       </div>
     )
   }
