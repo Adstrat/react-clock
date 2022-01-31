@@ -13,6 +13,9 @@ export default class App extends React.Component {
     };
     this.handleDateClick = this.handleDateClick.bind( this );
     this.handleTimeClick = this.handleTimeClick.bind( this );
+    this.handleGreen = this.handleGreen.bind( this );
+    this.handleBlue = this.handleBlue.bind( this );
+    this.handleRed = this.handleRed.bind( this );
   }
 
   handleDateClick() {
@@ -21,6 +24,18 @@ export default class App extends React.Component {
 
   handleTimeClick() {
     this.setState( { clock: true, date: false } )
+  }
+
+  handleGreen() {
+    this.setState( { color: '#39D1B4' } )
+  }
+
+  handleBlue() {
+    this.setState( { color: '#487BA0' } )
+  }
+
+  handleRed() {
+    this.setState( { color: '#D84A51' } )
   }
 
   render() {
@@ -39,6 +54,7 @@ export default class App extends React.Component {
           >Show Date
           </button>
         </div>
+
         <div className="time-container">
           {this.state.clock &&
             <Clock
@@ -55,6 +71,23 @@ export default class App extends React.Component {
             />
           }
         </div>
+
+
+        <div className="color-container">
+          <div
+            className="color green"
+            onClick={this.handleGreen}>
+          </div>
+          <div
+            className="color blue"
+            onClick={this.handleBlue}>
+          </div>
+          <div
+            className="color red"
+            onClick={this.handleRed}>
+          </div>
+        </div>
+
 
       </div >
     )
