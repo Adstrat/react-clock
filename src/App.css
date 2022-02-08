@@ -30,7 +30,8 @@
 }
 
 .date-button:hover,
-.time-button:hover {
+.time-button:hover,
+.color:hover {
   cursor: pointer;
 }
 
