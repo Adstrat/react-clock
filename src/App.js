@@ -2,6 +2,7 @@ import './App.css';
 import React from 'react';
 import Clock from './Clock';
 import Date from './Date';
+import Timer from './Timer';
 
 export default class App extends React.Component {
   constructor( props ) {
@@ -88,6 +89,7 @@ export default class App extends React.Component {
           </div>
         </div>
 
+        <Timer />
 
       </div >
     )
