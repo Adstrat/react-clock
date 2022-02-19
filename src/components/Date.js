@@ -11,7 +11,7 @@ export default class Clock extends React.Component {
   render() {
     return (
       <div
-        className="date"
+        className="time"
         style={this.props.style}
       >
         {this.state.date.toDateString()}

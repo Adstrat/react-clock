@@ -27,7 +27,7 @@ const Timer = () => {
 
   return (
     <div>
-      <h1 className='timer'>
+      <h1 className='time-container time'>
         {seconds}s
       </h1>
       <div className='button-container'>

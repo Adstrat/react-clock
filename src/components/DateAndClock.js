@@ -7,22 +7,18 @@ export default class DateAndClock extends React.Component {
     super( props );
     this.state = {
       color: '#39D1B4',
-      clock: true,
-      date: false
+      clock: true
     };
-    this.handleDateClick = this.handleDateClick.bind( this );
-    this.handleTimeClick = this.handleTimeClick.bind( this );
+    this.handleToggle = this.handleToggle.bind( this );
     this.handleGreen = this.handleGreen.bind( this );
     this.handleBlue = this.handleBlue.bind( this );
     this.handleRed = this.handleRed.bind( this );
   }
 
-  handleDateClick() {
-    this.setState( { clock: false, date: true } )
-  }
-
-  handleTimeClick() {
-    this.setState( { clock: true, date: false } )
+  handleToggle() {
+    this.setState( prevState => ( {
+      clock: !prevState.clock
+    } ) );
   }
 
   handleGreen() {
@@ -41,18 +37,6 @@ export default class DateAndClock extends React.Component {
     return (
 
       <div>
-        <div className="button-container">
-          <button
-            className="time-button"
-            onClick={this.handleTimeClick}
-          >Show Time
-          </button>
-          <button
-            className="date-button"
-            onClick={this.handleDateClick}
-          >Show Date
-          </button>
-        </div>
 
         <div className="time-container">
           {this.state.clock &&
@@ -62,7 +46,7 @@ export default class DateAndClock extends React.Component {
               }}
             />
           }
-          {this.state.date &&
+          {!this.state.clock &&
             <Date
               style={{
                 color: this.state.color,
@@ -71,6 +55,13 @@ export default class DateAndClock extends React.Component {
           }
         </div>
 
+        <div className='button-container'>
+          <button
+            className="time-button"
+            onClick={this.handleToggle}
+          >{this.state.clock ? "Display Date" : "Display Clock"}
+          </button>
+        </div>
 
         <div className="color-container">
           <div
