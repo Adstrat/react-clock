@@ -16,6 +16,17 @@
 
 .time-container {
   height: 22vh;
+  flex-direction: column;
+}
+.color-container {
+  height: 10vw;
+ }
+
+.time-container,
+.color-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .clock {
@@ -35,10 +46,7 @@
   cursor: pointer;
 }
 
-.color-container {
- height: 10vw;
- display: flex;
-}
+
 
 .color {
   width: 60px;
