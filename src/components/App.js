@@ -1,6 +1,7 @@
 import React from 'react';
 
 import DateAndClock from './DateAndClock';
+import Navbar from './Navbar';
 import Timer from './Timer';
 
 export default class App extends React.Component {
@@ -25,14 +26,9 @@ export default class App extends React.Component {
     return (
       <div className="main-container">
 
-        <div className='button-container'>
-          <button onClick={this.handleClock}>
-            Date and Time
-          </button>
-          <button onClick={this.handleTimer} >
-            Timer
-          </button>
-        </div>
+        <Navbar
+          handleClock={this.handleClock}
+          handleTimer={this.handleTimer} />
 
         {this.state.clock
           ? <DateAndClock />
