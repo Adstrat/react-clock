@@ -1,5 +1,4 @@
 import React from 'react';
-
 import DateAndClock from './DateAndClock';
 import Navbar from './Navbar';
 import Timer from './Timer';

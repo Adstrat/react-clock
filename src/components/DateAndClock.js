@@ -1,6 +1,8 @@
 import React from 'react';
 import Clock from './Clock';
+import Color from './Color';
 import Date from './Date';
+import ToggleDateClock from './ToggleDateClock';
 
 export default class DateAndClock extends React.Component {
   constructor( props ) {
@@ -55,28 +57,15 @@ export default class DateAndClock extends React.Component {
           }
         </div>
 
-        <div className='button-container'>
-          <button
-            className="time-button"
-            onClick={this.handleToggle}
-          >{this.state.clock ? "Display Date" : "Display Clock"}
-          </button>
-        </div>
+        <ToggleDateClock
+          handleToggle={this.handleToggle}
+          clock={this.state.clock} />
 
-        <div className="color-container">
-          <div
-            className="color green"
-            onClick={this.handleGreen}>
-          </div>
-          <div
-            className="color blue"
-            onClick={this.handleBlue}>
-          </div>
-          <div
-            className="color red"
-            onClick={this.handleRed}>
-          </div>
-        </div>
+
+        <Color
+          handleGreen={this.handleGreen}
+          handleBlue={this.handleBlue}
+          handleRed={this.handleRed} />
 
       </div >
     )

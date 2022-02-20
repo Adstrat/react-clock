@@ -7,7 +7,7 @@
 
 .button-container {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-evenly;
   min-width: 30vw;
   height: 5vh;
@@ -28,6 +28,15 @@
   justify-content: center;
 }
 
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 10vh;
+  background-color: #487BA0;
+}
+
 .clock {
   width: 250px;
 }
@@ -36,14 +45,15 @@
   height: 60px;
   font-size: 400%;
 }
+.timer {
+  text-align: center;
+}
 
-.date-button:hover,
-.time-button:hover,
+button:hover,
+button:hover,
 .color:hover {
   cursor: pointer;
 }
-
-
 
 .color {
   width: 60px;
@@ -61,7 +71,4 @@
 
 .red {
   background-color: #D84A51;
-}
-.timer {
-  text-align: center;
 }

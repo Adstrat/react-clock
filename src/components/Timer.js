@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import TimerButtons from './TimerButtons';
 
 const Timer = () => {
   const [seconds, setSeconds] = useState( 0 );
@@ -27,17 +28,17 @@ const Timer = () => {
 
   return (
     <div>
-      <h1 className='time-container time'>
-        {seconds}s
-      </h1>
-      <div className='button-container'>
-        <button onClick={toggle}>
-          {isActive ? 'Stop' : 'Start'}
-        </button>
-        <button className="button" onClick={reset}>
-          Reset
-        </button>
+      <div className='time-container'>
+        <div className="time">
+          {seconds}s
+        </div>
       </div>
+      <TimerButtons
+        toggle={toggle}
+        reset={reset}
+        isActive={isActive} />
+
+
     </div>
   );
 };

@@ -4,9 +4,9 @@ export default class Navbar extends React.Component {
 
   render() {
     return (
-      <div className="main-container">
 
-        <div className='button-container'>
+      <div className='navbar'>
+        <div className="button-container">
           <button onClick={this.props.handleClock}>
             Date and Time
           </button>
@@ -15,9 +15,8 @@ export default class Navbar extends React.Component {
           </button>
         </div>
 
+      </div>
 
-
-      </div >
     )
   }
 }
