@@ -1,6 +1,11 @@
 # A React Clock App 
 
-An app to practice lifecycle methods in class components. 
+### An app built to practice:
+
+- lifecycle methods in class components (components/Clock.js)
+- useEffect method in functional components (components/Timer.js)
+- separation of concerns (container from presentational components)
+
 
 ![Demo](assets/react-clock.gif)
 
